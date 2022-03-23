@@ -1,0 +1,422 @@
+@use 'var' as v
+
+@font-face
+	font-family: han
+	src: url(../media/typeface/han.woff)
+
+@font-face
+	font-family: tp_r
+	src: url(../media/typeface/tp_r.woff)
+
+@font-face
+	font-family: tp_trajan
+	src: url(../media/typeface/tp_tra.woff)
+
+@font-face
+	font-family: tko_optima
+	src: url(../media/typeface/tokyo_optima.woff)
+
+@font-face
+	font-family: tko_uni
+	src: url(../media/typeface/tokyo_univers.woff)
+
+@font-face
+	font-family: ewf_uni
+	src: url(../media/typeface/ewf_univers.woff)
+
+@font-face
+	font-family: nezha
+	src: url(../media/typeface/nezha.woff)
+
+@font-face
+	font-family: gis
+	src: url(../media/typeface/gis_test3.woff)
+
+@font-face
+	font-family: alita
+	src: url(../media/typeface/alita.woff)
+
+
+.letters
+	@include v.absolute()
+	@include v.transition(transform .75s)
+	display: none
+	img 
+		width: 100%
+
+.han_letters
+	font-family: 'han'
+	color: black
+	font-size: 50vw
+	display: block
+
+.han_letter_0
+	@include v.transform(translate3d(1vw, -2vw, 0) rotate(16deg))
+	/*i*/
+
+.han_letter_1
+	@include v.transform(translate3d(18vw, -30vw, 0) rotate(140deg))
+	/*j*/
+
+.han_letter_2
+	@include v.transform(translate3d(-15vw, 5vw, 0) rotate(72deg))
+	/*n bodoni*/
+
+.han_letter_3
+	@include v.transform(translate3d(65vw, 10vw, 0) rotate(70deg))
+	/*j*/
+
+.han_letter_4
+	@include v.transform(translate3d(55vw, 17vw, 0) rotate(-16deg))
+	/*n*/
+
+.han_letter_5
+	@include v.transform(translate3d(46vw, -15vw, 0) rotate(-60deg))
+	/*~*/
+
+.han_letter_6
+	@include v.transform(translate3d(20vw, 13vw, 0) rotate(-210deg))
+	/*0*/
+
+.hanzi[viewing = 'han'] 
+	.han_letters
+		@include v.transform(translate3d(27vw, 0vw, 0) rotate(0))
+
+
+
+.taipei_rockwell_letters
+	font-family: tp_r
+	color: black
+	font-size:32.5vw
+
+.taipei_rockwell_letter_0
+	@include v.transform(translate3d(-45vw, 10vw, 0) rotate(180deg))
+
+.taipei_rockwell_letter_1
+	@include v.transform(translate3d(0vw, 10vw, 0) rotate(0deg))
+
+.taipei_rockwell_letter_2
+	@include v.transform(translate3d(41.5vw, 24vw, 0) rotate(180deg))
+
+.hanzi[viewing = 'taipei_rockwell'] 
+	.taipei_rockwell_letters
+		@include v.transform(translate3d(21vw, 7.5vw, 0) rotate(0))
+
+
+.taipei_trajan_letters
+	font-family: tp_trajan
+	color: black
+	font-size:42.5vw
+
+.taipei_trajan_letter_0
+	@include v.transform(translate3d(2vw, 10vw, 0) rotate(0deg))
+
+.taipei_trajan_letter_1
+	@include v.transform(translate3d(12vw, 3.25vw, 0) rotate(0deg))
+
+.taipei_trajan_letter_2
+	@include v.transform(translate3d(-1.5vw, -32.75vw, 0) rotate(-90deg))
+
+.taipei_trajan_letter_3
+	@include v.transform(translate3d(12.5vw, 18.5vw, 0) rotate(90deg))
+
+.taipei_trajan_letter_4
+	@include v.transform(translate3d(2vw, -3vw, 0) rotate(0deg))
+
+.taipei_trajan_letter_5
+	@include v.transform(translate3d(-9vw, 12.5vw, 0) rotate(180deg))
+
+.taipei_trajan_letter_6
+	@include v.transform(translate3d(-10vw, 5vw, 0) rotate(0deg))
+
+.hanzi[viewing = 'taipei_trajan'] .taipei_trajan_letters
+	@include v.transform(translate3d(25vw, 3.5vw, 0) rotate(0))
+
+.taipei_trajan_letters
+	font-family: tp_trajan
+	color: black
+	font-size:42.5vw
+
+
+.tokyo_optima_letters
+	font-family: tko_optima
+	color: black
+	font-size:45vw
+
+.tokyo_optima_letter_0
+	@include v.transform(translate3d(-28vw, -22vw, 0) rotate(196deg))
+
+.tokyo_optima_letter_1
+	@include v.transform(translate3d(-11.5vw, 4.5vw, 0) rotate(108deg))
+
+.tokyo_optima_letter_2
+	@include v.transform(translate3d(0vw, 0vw, 0) rotate(-180deg))
+
+.tokyo_optima_letter_3
+	@include v.transform(translate3d(32vw, -7vw, 0) rotate(78deg))
+
+.tokyo_optima_letter_4
+	@include v.transform(translate3d(-8vw, 29vw, 0) rotate(-38deg))
+
+.tokyo_optima_letter_5
+	@include v.transform(translate3d(20vw, 27vw, 0) rotate(180deg))
+
+.tokyo_optima_letter_6
+	@include v.transform(translate3d(26.5vw, -2vw, 0) rotate(-282deg))
+
+.hanzi[viewing = 'tokyo_optima'] .tokyo_optima_letters
+	@include v.transform(translate3d(28.5vw, 2.5vw, 0) rotate(0))
+
+
+.tokyo_univers_letters
+	font-family: tko_uni
+	color: black
+	font-size:45vw
+
+.tokyo_univers_letter_0
+	@include v.transform(translate3d(-2vw, 30vw, 0) rotate(0deg))
+
+.tokyo_univers_letter_1
+	@include v.transform(translate3d(-22.5vw, -8vw, 0) rotate(180deg))
+
+.tokyo_univers_letter_2
+	@include v.transform(translate3d(20.5vw, -2.75vw, 0) rotate(0deg))
+
+.tokyo_univers_letter_3
+	@include v.transform(translate3d(-1.5vw, 11.85vw, 0) rotate(180deg))
+
+.tokyo_univers_letter_4
+	@include v.transform(translate3d(28vw, 31.25vw, 0) rotate(0deg))
+
+.tokyo_univers_letter_5
+	@include v.transform(translate3d(29.5vw, -8.5vw, 0) rotate(-180deg))
+
+.tokyo_univers_letter_6
+	@include v.transform(translate3d(44.5vw, 11.5vw, 0) rotate(180deg))
+
+.tokyo_univers_letter_7
+	@include v.transform(translate3d(71.5vw, -11.25vw, 0) rotate(0deg))
+
+.hanzi[viewing = 'tokyo_univers'] .tokyo_univers_letters
+	@include v.transform(translate3d(38vw, 3vw, 0) rotate(0))
+
+
+.ewf_univers_letters
+	font-family: ewf_uni
+	color: black
+	font-size:45vw
+
+.ewf_univers_letter_0
+	@include v.transform(translate3d(0vw, -12vw, 0) rotate(-90deg))
+
+.ewf_univers_letter_1
+	@include v.transform(translate3d(-14vw, -18vw, 0) rotate(180deg))
+
+.ewf_univers_letter_2
+	@include v.transform(translate3d(-7vw, -2vw, 0) rotate(180deg))
+
+.ewf_univers_letter_3
+	@include v.transform(translate3d(11.5vw, -3vw, 0) rotate(180deg))
+
+.ewf_univers_letter_4
+	@include v.transform(translate3d(31vw, -1.85vw, 0) rotate(180deg))
+
+.ewf_univers_letter_5
+	@include v.transform(translate3d(47vw, 9.5vw, 0) rotate(-180deg))
+
+.hanzi[viewing = 'ewf_univers'] .ewf_univers_letters
+	@include v.transform(translate3d(37vw, 3vw, 0) rotate(0))
+
+
+.nezha_letters
+	font-family: nezha
+	color: black
+	font-size:20vw
+
+.nezha_letter_0
+	@include v.transform(translate3d(3vw, 4vw, 0) rotate(0deg))
+
+.nezha_letter_1
+	@include v.transform(translate3d(5vw, 4vw, 0) rotate(0deg))
+
+.nezha_letter_2
+	@include v.transform(translate3d(-58vw, 0vw, 0) rotate(180deg))
+
+.nezha_letter_3
+	@include v.transform(translate3d(14vw, -3.75vw, 0) rotate(0deg))
+
+.nezha_letter_4
+	@include v.transform(translate3d(13vw, 2.5vw, 0) rotate(0deg))
+
+.nezha_letter_5
+	@include v.transform(translate3d(14.5vw, 0.5vw, 0) rotate(0deg))
+
+.nezha_letter_6
+	@include v.transform(translate3d(12vw, -12vw, 0) rotate(-90deg))
+
+.nezha_letter_7
+	@include v.transform(translate3d(-38.5vw, 26vw, 0) rotate(-90deg))
+
+.nezha_letter_8
+	@include v.transform(translate3d(-39vw, 23vw, 0) rotate(0deg))
+
+.nezha_letter_9
+	@include v.transform(translate3d(-28vw, 33.5vw, 0) rotate(-90deg))
+
+.nezha_letter_10
+	@include v.transform(translate3d(-7.5vw, 22.5vw, 0) rotate(180deg))
+
+.nezha_letter_11
+	@include v.transform(translate3d(-34vw, 21.5vw, 0) rotate(0deg))
+
+.nezha_letter_12
+	@include v.transform(translate3d(-2vw, -5vw, 0) rotate(90deg))
+
+.nezha_letter_13
+	@include v.transform(translate3d(46vw, 19vw, 0) rotate(180deg))
+
+.nezha_letter_14
+	@include v.transform(translate3d(-34vw, 21.5vw, 0) rotate(0deg))
+
+.hanzi[viewing = 'nezha'] .nezha_letters
+	@include v.transform(translate3d(4vw, 15vw, 0) rotate(0))
+
+
+.gis_deftone_letters
+	font-family: gis
+	color: black
+	font-size:30vw
+	width:75vw
+
+.gis_deftone_letter_0
+	@include v.transform(translate3d(-5vw, 7vw, 0) rotate(0deg))
+
+.gis_deftone_letter_1
+	@include v.transform(translate3d(-42vw, 9.5vw, 0) rotate(115deg))
+
+.gis_deftone_letter_2
+	@include v.transform(translate3d(4vw, 4.5vw, 0) rotate(0deg))
+
+.gis_deftone_letter_3
+	@include v.transform(translate3d(-2vw, 11.8vw, 0) rotate(0deg))
+
+.gis_deftone_letter_27
+	@include v.transform(translate3d(9vw, -6.4vw, 0) rotate(-65deg))
+
+.gis_deftone_letter_4
+	@include v.transform(translate3d(12vw, 4.55vw, 0) rotate(0deg))
+
+.gis_deftone_letter_8
+	@include v.transform(translate3d(10vw, 11.65vw, 0) rotate(0deg))
+
+.gis_deftone_letter_9
+	@include v.transform(translate3d(19vw, 4.1vw, 0) rotate(0deg))
+
+.gis_deftone_letter_5
+	@include v.transform(translate3d(0vw, 2vw, 0) rotate(0deg))
+
+.gis_deftone_letter_6
+	@include v.transform(translate3d(6.5vw, 2vw, 0) rotate(0deg))
+
+.gis_deftone_letter_7
+	@include v.transform(translate3d(11vw, 2vw, 0) rotate(0deg))
+
+.gis_deftone_letter_10
+	@include v.transform(translate3d(13vw, 2vw, 0) rotate(0deg))
+
+.gis_deftone_letter_11
+	@include v.transform(translate3d(-43vw, 14.35vw, 0) rotate(180deg))
+
+.gis_deftone_letter_12
+	@include v.transform(translate3d(-34vw, 14.35vw, 0) rotate(180deg))
+
+.gis_deftone_letter_13
+	@include v.transform(translate3d(20vw, 16.85vw, 0) rotate(30deg))
+
+.gis_deftone_letter_14
+	@include v.transform(translate3d(29vw, -2.5vw, 0) rotate(0deg))
+
+.gis_deftone_letter_15
+	@include v.transform(translate3d(32.5vw, -2.5vw, 0) rotate(0deg))
+
+.gis_deftone_letter_16
+	@include v.transform(translate3d(29.5vw, 1vw, 0) rotate(0deg))
+
+.gis_deftone_letter_17
+	@include v.transform(translate3d(36.5vw, -2.75vw, 0) rotate(0deg))
+
+.gis_deftone_letter_18
+	@include v.transform(translate3d(16vw, 11.65vw, 0) rotate(180deg))
+
+.gis_deftone_letter_19
+	@include v.transform(translate3d(42.5vw, -2.75vw, 0) rotate(0deg))
+
+.gis_deftone_letter_20
+	@include v.transform(translate3d(-27.5vw, 13.5vw, 0) rotate(0deg))
+
+.gis_deftone_letter_21
+	@include v.transform(translate3d(-28vw, 17vw, 0) rotate(0deg))
+
+.gis_deftone_letter_22
+	@include v.transform(translate3d(-21vw, 15vw, 0) rotate(0deg))
+
+.gis_deftone_letter_23
+	@include v.transform(translate3d(-6.75vw, 32.5vw, 0) rotate(180deg))
+
+.gis_deftone_letter_24
+	@include v.transform(translate3d(-9vw, 12.25vw, 0) rotate(0deg))
+
+.gis_deftone_letter_25
+	@include v.transform(translate3d(-8vw, 12.25vw, 0) rotate(0deg))
+
+.gis_deftone_letter_26
+	@include v.transform(translate3d(-8vw, 13.5vw, 0) rotate(0deg))
+
+.hanzi .gis_deftone_letters
+	@include v.transform(translate3d(26vw, 10vw, 0) rotate(0))
+
+
+.alita_letters
+	font-family: alita
+	color: black
+	font-size:43vw
+
+.alita_letter_0
+	@include v.transform(translate3d(-26vw, -35vw, 0) rotate(-90deg))
+
+.alita_letter_1
+	@include v.transform(translate3d(-23vw, 29vw, 0) rotate(90deg))
+
+.alita_letter_2
+	@include v.transform(translate3d(13.5vw, 8.25vw, 0) rotate(32deg))
+
+.alita_letter_3
+	@include v.transform(translate3d(-19vw, 25.25vw, 0) rotate(135deg))
+
+.alita_letter_4
+	@include v.transform(translate3d(25vw, -19vw, 0) rotate(-75deg))
+
+.alita_letter_5
+	@include v.transform(translate3d(50vw, -12.5vw, 0) rotate(0deg))
+
+.alita_letter_6
+	@include v.transform(translate3d(-30vw, -8vw, 0) rotate(110deg))
+
+.alita_letter_7
+	@include v.transform(translate3d(-35vw, 11vw, 0) rotate(29deg))
+
+.alita_letter_8
+	@include v.transform(translate3d(-9vw, 29.5vw, 0) rotate(-70deg))
+
+.alita_letter_9
+	@include v.transform(translate3d(7vw, -1vw, 0) rotate(0deg))
+
+.hanzi[viewing = 'alita'] .alita_letters
+	@include v.transform(translate3d(6vw, 3vw, 0) rotate(0))
+
+
+
+
+
+
+

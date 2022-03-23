@@ -1,0 +1,248 @@
+@font-face{
+	font-family: 'colfax_r';
+	src:url(../media/typeface/Colfax-Regular.otf);
+}
+@font-face{
+	font-family: 'colfax_m';
+	src:url(../media/typeface/Colfax-Medium.otf);
+}
+*{
+	margin:0;
+	padding:0;
+}
+::-moz-selection { 
+	/*background: rgba(255,100,200,1); */
+}
+::selection { 
+	/*background: rgba(255,100,200,1); */
+}
+body{
+	font-family: 'colfax_r', sans-serif;
+	background-color: rgba(255, 60, 60, 1); 
+	color:white;
+	
+}
+h1{	
+	font-family: 'colfax_m';
+	font-size:1.2vw;
+	line-height: 1.2em;
+	font-weight:normal;
+	
+}
+h2{
+	font-family: 'colfax_r';
+	font-size:1.2vw;
+	line-height: 1.2em;
+	font-weight:normal;
+
+}
+p{	
+	/*font-family: 'colfax_m', sans-serif;*/
+	font-size: 2.5vw;
+	line-height: 1.2em;
+}
+
+.preface_ctner{
+	opacity: 0;
+	transition: opacity .5s;
+}
+.frontpage .preface_ctner{
+	opacity: 1;
+}
+.preface_ctner a{
+	text-decoration: none;
+	color:white;
+	background-size: 2px 1em;
+  	box-shadow:
+    inset 0 -0.0005em black,
+    inset 0 -0.05em white;
+}
+
+.preface_ctner a:hover{
+	background-color: white;
+	color: rgba(255,60,60,1); 
+}
+.nav{
+	
+	box-sizing:border-box;
+	display: flex;
+	width:96vw;
+	margin:0 auto;
+	position:relative;
+	z-index: 10;
+	border-bottom: 1px black solid;
+}
+.nav_item{
+	flex:1;
+	padding:1.5vw 2vw;
+
+}
+.blank_item{
+	margin: 0 4.5vw;
+}
+.nav > div{
+}
+.title{
+	
+}
+
+
+
+.menu{
+	position:relative;
+	text-align: center;
+	width:29vw;
+	/*padding-left: 2vw;*/
+	box-sizing: border-box;
+	cursor:pointer;
+}
+.menu h1, .menu h2{
+	color:black;
+	/*line-height: 1.5em;*/
+}
+.menu h2{
+	/*padding-left: 40%;*/
+	line-height: 1.5em;
+}
+
+
+.preface_ctner{
+	padding:0 1.75vw;
+	margin: 0 2vw;
+	width:96vw;
+	position:absolute;
+	z-index: 10;
+	box-sizing:border-box;
+	bottom:2vw;
+	pointer-events: none;
+
+}
+.preface_ctner a{
+	pointer-events: auto;
+}
+.preface_flexCtner{
+	display: flex;
+
+}
+#pre0{
+	width:18vw;
+}
+#pre1{
+	/*width:9vw;*/
+	flex:1;
+}
+#pre2{
+	flex:1;
+	text-align: center
+}
+#pre3{
+	flex:1;
+	text-align: right;
+	
+}
+
+.background{
+	position:absolute;
+	top:0;
+	left:0;
+	width:100vw;
+	height:100vh;
+	z-index: 1;
+	overflow: hidden;
+}
+.hoverZone{
+	position:absolute;
+	top:0;
+	height:100vh;
+	width:31vw;
+	border-right:1px black solid;
+}
+.hoverZone_r{
+	right:0;
+	border-left:1px black solid;
+	border-right:0;
+
+}
+
+.hanzi #pre3 .lan{
+	background-color: white;
+	color:rgba(255, 60, 60, 1); 
+}
+#pre1 .lan{
+	background-color: white;
+	color:rgba(255, 60, 60, 1); 
+}
+.hanzi #pre1 .lan{
+	background-color: rgba(255, 60, 60, 1); 
+	color:white; 
+}
+.preface_flexCtner span{
+	padding-top: 0.5vw;
+}
+.arrow_down{
+  width: 0; 
+  height: 0; 
+  border-left: 12.5px solid transparent;
+  border-right: 12.5px solid transparent;
+  border-top: 18px solid #000;
+  margin: 0.75vw auto 0 auto;
+  transition:transform .25s;
+
+}
+.dropDown_holder{
+	width:29vw;
+	height:0;
+	position:absolute;
+	right:0;
+	top:6.5vw;
+	overflow: hidden;
+}
+.dropDown{
+	position: relative;
+	height:65vh;
+	width:100%;
+	transform:translate(0, -72vh);
+	transition:transform .5s;
+	background-color: black;
+	border:1px solid black;
+	border-top: 0;
+	box-sizing: border-box;
+	overflow: scroll;
+}
+.dropping .dropDown_holder{
+	height:auto;
+}
+.dropping .dropDown{
+	transform:translate(0, 0);
+
+}
+.dropping .arrow_down{
+	transform: translate(0, 1vw);
+}
+.menu_items{
+	padding: 1vw 1vw 0 1vw;
+	text-align: left;
+	height:10vh;
+	width:100%;
+	background-color: white;
+	border-bottom: 1px black solid;
+	box-sizing: border-box;
+	cursor:pointer;
+}
+.menu_items:hover, .menu_active{
+	background-color: rgba(255,60,60,1);
+}
+
+.typeface_ctner{
+	width:29vw;
+	text-align: center;
+	position: absolute;
+	bottom:3vw;
+	right:2vw;
+	color:black;
+
+}
+.frontpage .typeface_ctner{
+	opacity: 0;
+}
+
